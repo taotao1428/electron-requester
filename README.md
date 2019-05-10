@@ -68,3 +68,31 @@ export interface ChannelHandler {
   handle(responser: Responser, param: {[key: string]: any});
 }
 ```
+
+## ipcRenderer中使用
+```typescript
+import {DefaultRequester, Result} from "electron-requester";
+import {ipcRenderer} from 'electron';
+
+const requester = new DefaultRequester(ipcRenderer); // 构建一个Requester对象
+
+// 发送请求
+requester.request('echo', {info: 'hello'}, (result: Result) => {
+    console.log(result);
+});
+```
+
+## ipcMain中使用
+```typescript
+import {
+    DefaultDispatcher,
+    DefaultHandlerRegistry,
+    EchoChannelHandler
+} from "electron-requester";
+
+const handlerRegistry = new DefaultHandlerRegistry();
+handlerRegistry.register('echo', new EchoChannelHandler()); // 注册监听的channel
+
+const dispatcher = new DefaultDispatcher(handlerRegistry); // 监听channel
+dispatcher.dispatch();
+```
