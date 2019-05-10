@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "outDir": "./build",
+    "declaration": true
+  },
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
