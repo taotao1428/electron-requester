@@ -1,7 +1,7 @@
 import {HandlerRegistry} from "./HandlerRegistry";
 import {ChannelHandler} from "./ChannelHandler";
 
-export abstract class DefaultHandlerRegistry implements HandlerRegistry {
+export class DefaultHandlerRegistry implements HandlerRegistry {
     private handlers = new Map<string, ChannelHandler>();
 
     getHandler(channel: string): ChannelHandler {
