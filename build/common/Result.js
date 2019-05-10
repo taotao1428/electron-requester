@@ -43,4 +43,3 @@ Result.ERROR_CODE = 5000;
 Result.DESTROYED_CODE = 5001;
 Result.NO_HANDLER_CODE = 5002;
 exports.Result = Result;
-//# sourceMappingURL=Result.js.map

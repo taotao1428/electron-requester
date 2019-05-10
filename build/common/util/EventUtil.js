@@ -22,4 +22,3 @@ function respChannel(channel, token) {
     return channel + '_' + token + '_resp';
 }
 exports.respChannel = respChannel;
-//# sourceMappingURL=EventUtil.js.map

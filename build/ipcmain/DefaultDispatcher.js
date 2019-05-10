@@ -36,4 +36,3 @@ class InnerNoHandlerChannelHandler {
         responser.send(Result_1.Result.noHandler());
     }
 }
-//# sourceMappingURL=DefaultDispatcher.js.map

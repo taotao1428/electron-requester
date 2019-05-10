@@ -1,8 +1,10 @@
 {
   "name": "electron-requester",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "方便ipcRenderer与ipcMain通信",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": ["build"],
   "scripts": {
     "build": "tsc",
     "test": "mocha -r ts-node/register test/**/*.spec.ts"

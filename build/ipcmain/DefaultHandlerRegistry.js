@@ -13,4 +13,3 @@ class DefaultHandlerRegistry {
     }
 }
 exports.DefaultHandlerRegistry = DefaultHandlerRegistry;
-//# sourceMappingURL=DefaultHandlerRegistry.js.map
