@@ -10,6 +10,7 @@
   "keywords": [
     "electron"
   ],
+  "repository": "https://github.com/taotao1428/electron-requester",
   "author": "Charles He",
   "license": "ISC",
   "devDependencies": {
