@@ -1,7 +1,14 @@
 # electron-requester
 用于electron中ipcRenderer与ipcMain通信。electron提供的api是事件的发送与监听，但是这种模式在开发的过程中并不方便。所以我将这些接口封装成服务端与客户端的形式，ipcRenderer为客户端，ipcMain作为服务端。
 
-## Requester
+# 安装
+```
+npm install electron-requester
+```
+
+# 接口介绍
+
+## 1. Requester
 提供给ipcRenderer使用，用于请求ipcMain。有一个实现类`DefaultRequester`
 
 ```typescript
@@ -21,7 +28,7 @@ export interface Requester {
 ```
 
 
-## Dispatcher
+## 2. Dispatcher
 提供给ipcMain使用，用于监听ipcRenderer发送的请求。有一个实现类`DefaultDispatcher`
 
 ```typescript
@@ -33,7 +40,7 @@ export interface Dispatcher {
 }
 ```
 
-## HandlerRegistry
+## 3. HandlerRegistry
 用于注册处理器，有一个实现类`DefaultHandlerRegistry`
 ```typescript
 /**
@@ -53,7 +60,7 @@ export interface HandlerRegistry {
     getHandler(channel: string): ChannelHandler;
 }
 ```
-## ChannelHandler
+## 4. ChannelHandler
 用于处理请求，有一个实现类`EchoChannelHandler`
 ```typescript
 /**
@@ -69,7 +76,9 @@ export interface ChannelHandler {
 }
 ```
 
-## ipcRenderer中使用
+# 使用
+
+## 1. ipcRenderer中使用
 ```typescript
 import {DefaultRequester, Result} from "electron-requester";
 import {ipcRenderer} from 'electron';
@@ -82,7 +91,7 @@ requester.request('echo', {info: 'hello'}, (result: Result) => {
 });
 ```
 
-## ipcMain中使用
+## 2. ipcMain中使用
 ```typescript
 import {
     DefaultDispatcher,
