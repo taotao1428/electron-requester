@@ -1,6 +1,6 @@
 {
   "name": "electron-requester",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "方便ipcRenderer与ipcMain通信",
   "main": "build/index.js",
   "scripts": {
