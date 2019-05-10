@@ -1,0 +1,2 @@
+# electron-requester
+用于electron中ipcRenderer与ipcMain通信
